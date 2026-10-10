@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, monospace;
+  --font-display: 'Cabinet Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Official Brand Colors */
+  --color-brand-green: #00A859;
+  --color-brand-green-hover: #028A4A;
+  --color-brand-green-light: #E6F7EF;
+  --color-brand-charcoal: #111316;
+
+  /* Builder / Architect Blueprint Palette */
+  --color-blueprint-deep: #081B33;
+  --color-blueprint-surface: #0E294B;
+  --color-blueprint-card: #13355E;
+  --color-blueprint-line: rgba(147, 197, 253, 0.22);
+  --color-blueprint-accent: #38BDF8;
+  --color-blueprint-amber: #F59E0B;
+
+  /* Drafting Vellum (White / Technical Drafting Paper) */
+  --color-drafting-vellum: #F8FAFC;
+  --color-drafting-surface: #FFFFFF;
+  --color-drafting-grid: rgba(14, 41, 75, 0.08);
+}
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Architect Drafting Blueprint Grids */
+.bg-blueprint-grid {
+  background-color: #081B33;
+  background-size: 28px 28px, 140px 140px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+    linear-gradient(to right, rgba(56, 189, 248, 0.18) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(56, 189, 248, 0.18) 1px, transparent 1px);
+}
+
+/* White Drafting Vellum Grid (Architect drafting paper) */
+.bg-vellum-grid {
+  background-color: #F8FAFC;
+  background-size: 28px 28px, 140px 140px;
+  background-image: 
+    linear-gradient(to right, rgba(14, 41, 75, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(14, 41, 75, 0.05) 1px, transparent 1px),
+    linear-gradient(to right, rgba(0, 168, 89, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 168, 89, 0.12) 1px, transparent 1px);
+}
+
+/* Hexagonal background texture */
+.hex-pattern {
+  background-size: 40px 69.28px;
+  background-image: radial-gradient(circle, rgba(56, 189, 248, 0.15) 1.5px, transparent 1.5px);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 168, 89, 0.3);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 168, 89, 0.6);
+}
